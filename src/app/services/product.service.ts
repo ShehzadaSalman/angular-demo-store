@@ -14,4 +14,10 @@ export class ProductService {
   getProducts(limit: number = 12): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}?limit=${limit}`);
   }
+
+
+  getProductById(productId: number): Observable<Product> {
+    return this.http.get<Product>(`${this.apiUrl}/${productId}`);
+  }
+
 }
