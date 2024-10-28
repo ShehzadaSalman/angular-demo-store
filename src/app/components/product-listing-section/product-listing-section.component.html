@@ -1,0 +1,17 @@
+<section class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl mb-24">Top Selling Products (2024)</h1>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+  >
+    <div *ngFor="let product of products">
+      <app-product-card
+        [id]="product.id"
+        [title]="product.title"
+        [category]="product.category"
+        [image]="product.image"
+        [price]="product.price"
+        [description]="product.description"
+      ></app-product-card>
+    </div>
+  </div>
+</section>

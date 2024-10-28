@@ -1,0 +1,29 @@
+<div
+  [routerLink]="['/product', id]"
+  class="card h-100 shadow-sm border-0 transition-transform hover:scale-105 hover:shadow-lg"
+>
+  <div class="text-center">
+    <img
+      [src]="image"
+      class="card-img-top p-3 w-full h-48 object-contain rounded-lg"
+      alt="{{ title }}"
+    />
+  </div>
+  <div class="card-body flex flex-col p-4">
+    <h5 class="card-title text-lg font-bold truncate">{{ title }}</h5>
+    <p class="card-text text-gray-500 mb-2">
+      <small class="uppercase">{{ category }}</small>
+    </p>
+    <p class="card-text text-gray-600 mb-3 text-sm">
+      {{ description.slice(0, 100) }}...
+    </p>
+    <div class="flex justify-between items-center mt-auto">
+      <h4 class="text-blue-600 mb-0 font-bold">${{ price }}</h4>
+      <button
+        class="btn border border-blue-600 text-blue-600 rounded-full px-4 py-2 hover:bg-blue-600 hover:text-white transition-colors duration-300"
+      >
+        <i class="bi bi-cart-plus mr-2"></i> Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
